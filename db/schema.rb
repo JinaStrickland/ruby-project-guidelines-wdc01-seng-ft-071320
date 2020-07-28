@@ -10,12 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_163821) do
+ActiveRecord::Schema.define(version: 2020_07_28_180426) do
+
+  create_table "clients", force: :cascade do |t|
+    t.text "name"
+    t.text "sector"
+    t.text "location"
+  end
 
   create_table "designers", force: :cascade do |t|
     t.text "name"
     t.text "title"
     t.text "specialty"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer "designers_id"
+    t.integer "clients_id"
+    t.text "name"
+    t.text "category"
+    t.text "size"
+    t.text "location"
   end
 
 end
