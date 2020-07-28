@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2020_07_28_180426) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.integer "designers_id"
-    t.integer "clients_id"
+    t.integer "designer_id"
+    t.integer "client_id"
     t.text "name"
     t.text "category"
     t.text "size"
