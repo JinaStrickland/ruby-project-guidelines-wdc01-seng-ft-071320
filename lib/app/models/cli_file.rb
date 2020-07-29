@@ -85,9 +85,11 @@ def promotion
     id = gets.chomp.to_i
     puts "\n"
     puts "To what title?"
-    title = gets.chomp
+    title = gets.chomp.to_s
     Designer.promotions(id, title)
-    # puts "\n"
-    # Designer.list_designers
+    puts "\n"
+    puts "Here is our updated Designer List:"
+    puts "\n"
+    Designer.list_designers
     puts "\n"
 end

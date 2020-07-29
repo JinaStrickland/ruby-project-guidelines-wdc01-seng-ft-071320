@@ -1,10 +1,10 @@
 require_relative '../config/environment'
 
 
-# greeting
+greeting
 # choose_option
-# action
+action
 # Designer.list_designers
 # Client.list_clients
 # Project.list_projects
-p Designer.promotions(24, "Project Manager")
+# p Designer.promotions(24, "Project Manager")

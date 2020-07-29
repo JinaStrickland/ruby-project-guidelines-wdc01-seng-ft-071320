@@ -18,11 +18,13 @@ class Designer < ActiveRecord::Base
   end
 
   def self.promotions(id, title)
-    find_designer = Designer.all.find do |dsgn|
-      dsgn.id == id 
+    Designer.all.map do |dsgn|
+      if dsgn.id == id
+      dsgn.title = title
+      dsgn.save
+      # dsgn.update(title: title)
+      end
     end
-    binding.pry
-    find_designer.title = title
   end
 
 
