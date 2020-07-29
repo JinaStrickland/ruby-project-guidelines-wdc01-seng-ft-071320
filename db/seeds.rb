@@ -7,7 +7,10 @@ jina = Designer.create(name: "Jina", title: "Senior Designer", specialty: "Comme
 andrew = Designer.create(name: "Andrew", title: "Project Manager", specialty: "Healthcare")
 joey = Designer.create(name: "Joey", title: "Junior Designer", specialty: "Commercial")
 anna = Designer.create(name: "Anna", title: "Project Manager", specialty: "Healthcare")
-becca = Designer.create(name: "Becca", title: "Partner", specialty: "Commercial")
+becca = Designer.create(name: "Becca", title: "Junior Designer", specialty: "Commercial")
+sam = Designer.create(name: "Sam", title: "Junior Designer", specialty: "Commercial")
+rick = Designer.create(name: "Rick", title: "Junior Designer", specialty: "Commercial")
+ben = Designer.create(name: "Ben", title: "Senior Designer", specialty: "Healthcare")
 
 flat = Client.create(name: "Flat Real Estate", sector: "Commercial", location: "Arlington VA")
 e_gency = Client.create(name: "E-Gency", sector: "Healthcare", location: "Washington DC")
