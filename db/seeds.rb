@@ -11,6 +11,7 @@ becca = Designer.create(name: "Becca", title: "Junior Designer", specialty: "Com
 sam = Designer.create(name: "Sam", title: "Junior Designer", specialty: "Commercial")
 rick = Designer.create(name: "Rick", title: "Junior Designer", specialty: "Commercial")
 ben = Designer.create(name: "Ben", title: "Senior Designer", specialty: "Healthcare")
+# mary = Designer.create(name: "Mary", title: "Senior Designer", specialty: "Healthcare")
 
 flat = Client.create(name: "Flat Real Estate", sector: "Commercial", location: "Arlington VA")
 e_gency = Client.create(name: "E-Gency", sector: "Healthcare", location: "Washington DC")
@@ -23,6 +24,6 @@ ironflat_reno = Project.create(designer_id: joey.id, client_id: ironflat.id, nam
 hash_pital_children = Project.create(designer_id: anna.id, client_id: hash_pital.id, name: "Hash-Pital Children Center Renovation", category: "Healthcare", size: "10,000 SF", location: "Fairfax VA")
 hash_pital_reno = Project.create(designer_id: becca.id, client_id: hash_pital.id, name: "Hash-Pital Renovation", category: "Healthcare", size: "100,000 SF", location: "Fairfax VA")
 
-# flat_reno2 = Project.create(designer_id: null, client_id: flat.id, name: "Flat Lobby Renovation", category: "Commercial", size: "25,000 SF", location: "Arlington VA")
-# flat_reno3 = Project.create(designer_id: null, client_id: flat.id, name: "Flat Restroom Renovation", category: "Commercial", size: "3,000 SF", location: "Arlington VA")
-
+# flat_reno2 = Project.create(designer_id: null, client_id: 9, name: "Flat Lobby Renovation", category: "Commercial", size: "25,000 SF", location: "Arlington VA")
+# flat_reno3 = Project.create(designer_id: null, client_id: 9, name: "Flat Restroom Renovation", category: "Commercial", size: "3,000 SF", location: "Arlington VA")
+# flat_restroom = Project.create(client_id: 9, name: "Flat Restroom Renovation", category: "Commercial", size: "3,000 SF", location: "Arlington VA")

@@ -1,24 +1,22 @@
 
 def greeting
-    puts "Welcome to our Design Studio Information Center!"
     puts "\n"
+    puts "Welcome to Design Studio!"
 end
 
 def choose_option
-    puts "\n"
-    puts "Choose from the following options:"
-    puts "**********************************"
-    puts "1. List all our Designers"
-    puts "2. List all our Clients"
-    puts "3. List all our Projects"
-    puts "4. Add new designer"
-    puts "5. Delete new designer"
-    puts "6. Promotion Day"
-    puts "7. Assign a Designer to a Project"
-    puts "8. List of all the Designers specialize in Commercial Projects:"
-    puts "\n"
+    puts "Choose from the following options(Enter a number):"
+    puts "**************************************************"
+    puts "1. List all Designers"
+    puts "2. List all Clients"
+    puts "3. List all Projects"
+    puts "4. Add new Designer"
+    puts "5. Delete new Designer"
+    puts "6. Promote a Designer"
+    puts "7. Assign a Designer to new Project"
+    puts "8. List all Designers specialize in Commercial Projects:"
     puts "9. Exit"
-    puts "**********************************"
+    puts "**************************************************"
     puts "\n"
 end
 
@@ -36,53 +34,73 @@ def action
         user_input = gets.chomp.to_i
         case user_input
         when 1 
+            puts "\n"
             Designer.list_designers
+            puts "\n"
         when 2
+            puts "\n"
             Client.list_clients
+            puts "\n"
         when 3
+            puts "\n"
             Project.list_projects
+            puts "\n"
         when 4
+            puts "\n"
             new_designer
+            puts "\n"
         when 5
+            puts "\n"
             delete_new_designer
+            puts "\n"
         when 6
+            puts "\n"
             promotion
+            puts "\n"
         when 7
+            puts "\n"
             assign_a_designer
+            puts "\n"
         when 8
+            puts "\n"
             Designer.designer_sepcialty_list("Commercial")
+            puts "\n"
         when 9
             exit_program
-            break
+            break                                                                          
         else
             # puts "Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ."
-
-                  
-            puts "█▀█ █░░ █▀▀ ▄▀█ █▀ █▀▀   ▀█▀ █▀█ █▄█   ▄▀█ █▀▀ ▄▀█ █ █▄░█ ░"
-            puts "█▀▀ █▄▄ ██▄ █▀█ ▄█ ██▄   ░█░ █▀▄ ░█░   █▀█ █▄█ █▀█ █ █░▀█ ▄"
-
-            
+            puts "\n"
+            puts "\n"
+            puts "█▀█ █░░ █▀▀ ▄▀█ █▀ █▀▀  ▀█▀ █▀█ █▄█  ▄▀█ █▀▀ ▄▀█ █ █▄░█ ░"
+            puts "█▀▀ █▄▄ ██▄ █▀█ ▄█ ██▄  ░█░ █▀▄ ░█░  █▀█ █▄█ █▀█ █ █░▀█ ▄"
+            puts "\n"
+            puts "\n"
             action
         end
     end
 end
 
 def new_designer
-    puts "Enter new designer name:"
+    puts "Enter new Designer's name:"
     name = gets.chomp.capitalize
-    puts "Enter new designer's title:"
+    puts "\n"
+    puts "Enter new Designer's title:"
     title = gets.chomp.capitalize
-    puts "Enger new designer's specialty:"
+    puts "\n"
+    puts "Enter new Designer's specialty:"
     specialty = gets.chomp.capitalize
+    puts "\n"
     Designer.add_designer(name, title, specialty)
     puts "\n"
     Designer.list_designers
 end
 
 def delete_new_designer
-    puts "Enter a Designer's ID to delete from the list below:"
+    puts "Enter Designer's ID to delete:"
     puts "\n"
     Designer.list_designers
+    puts "\n"
     id = gets.chomp.to_i
     Designer.delete(id)
     puts "\n"
@@ -92,7 +110,7 @@ end
 
 def promotion
     puts "It's a promotion day! Who would you like to promote?"
-    puts "Here is the list of all the designers. Please select an ID:"
+    puts "Here is a list of all the designers. Select Designer's ID:"
     puts "\n"
     Designer.list_designers
     id = gets.chomp.to_i
@@ -101,24 +119,24 @@ def promotion
     title = gets.chomp.to_s
     Designer.promotions(id, title)
     puts "\n"
-    puts "Here is our updated Designer List:"
+    puts "Updated Designer list:"
     puts "\n"
     Designer.list_designers
     puts "\n"
 end
 
 def assign_a_designer
-    puts "We just got a new project."
+    puts "We have a Project that needs to be assigned to a Designer."
     Project.show_project_with_no_designer
     puts "\n"
-    puts "Here is list of all the Desginers:"
+    puts "Here is list of all the Designers:"
     puts "\n"
     Designer.list_designers
     puts "\n"
-    puts "Let's assign a Designer to this Project. Select a Project ID:"
+    puts "Select a Project ID:"
     puts "\n"
     proj_id = gets.chomp.to_i
-    puts "Provide a Designer ID:"
+    puts "Provide a Designer's ID:"
     puts "\n"
     dsgn_id = gets.chomp.to_i
     puts "\n"
