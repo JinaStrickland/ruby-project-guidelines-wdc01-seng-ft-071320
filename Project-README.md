@@ -14,10 +14,6 @@ License code:
 Presentation:
 - Describe something you struggled to build, and show us how you ultimately implemented it in your code.
 
-
-
-- Discuss 3 things you learned in the process of working on this project.
-
     1. When we ran our code, the ActiveRecord log showed along with our codes. Maddie pointed to us the common questions section in the README.
     ActiveRecord::Base.logger = nil 
     We read it before, but didn't know what it was so we should asked question earlier.
@@ -30,19 +26,19 @@ Presentation:
         - create
         - rake db:seed
 
+- Discuss 3 things you learned in the process of working on this project.
+
+    1. Learned how the relationships work between the models.
+    2. Learned how to use ActiveRecord.
+    3. Learned how to build, access, and revise the database.
+
 
 - Address what, if anything, you would change or add to what you have today.
 
+    1. Use TTY Prompt
+    2. Add more edge cases 
+    3. Make it more fun with pictures/animation
 
 - Present any code you would like to highlight. 
 
-
-
- 
-Designer.list_designers
-Project.list_projects
-new_designer
-delete_new_designer
-promotion
-assign_a_designer
-Designer.designer_sepcialty_l("Commercial")
+    1. The action method on cli_file.rb
