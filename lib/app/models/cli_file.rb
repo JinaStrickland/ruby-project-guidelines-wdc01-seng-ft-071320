@@ -14,8 +14,10 @@ def choose_option
     puts "4. Add new designer"
     puts "5. Delete new designer"
     puts "6. Promotion Day"
+    puts "7. Assign a Designer to a Project"
+    puts "8. List of all the Designers specialize in Commercial Projects:"
     puts "\n"
-    puts "10. Exit"
+    puts "9. Exit"
     puts "**********************************"
     puts "\n"
 end
@@ -45,10 +47,21 @@ def action
             delete_new_designer
         when 6
             promotion
-        when 10
+        when 7
+            assign_a_designer
+        when 8
+            Designer.designer_sepcialty_list("Commercial")
+        when 9
             exit_program
             break
         else
+            # puts "Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ."
+
+                  
+            puts "█▀█ █░░ █▀▀ ▄▀█ █▀ █▀▀   ▀█▀ █▀█ █▄█   ▄▀█ █▀▀ ▄▀█ █ █▄░█ ░"
+            puts "█▀▀ █▄▄ ██▄ █▀█ ▄█ ██▄   ░█░ █▀▄ ░█░   █▀█ █▄█ █▀█ █ █░▀█ ▄"
+
+            
             action
         end
     end
@@ -93,3 +106,27 @@ def promotion
     Designer.list_designers
     puts "\n"
 end
+
+def assign_a_designer
+    puts "We just got a new project."
+    Project.show_project_with_no_designer
+    puts "\n"
+    puts "Here is list of all the Desginers:"
+    puts "\n"
+    Designer.list_designers
+    puts "\n"
+    puts "Let's assign a Designer to this Project. Select a Project ID:"
+    puts "\n"
+    proj_id = gets.chomp.to_i
+    puts "Provide a Designer ID:"
+    puts "\n"
+    dsgn_id = gets.chomp.to_i
+    puts "\n"
+    Project.assign_designer(proj_id, dsgn_id)
+    puts "\n"
+    puts "Updated Project List:"
+    puts "\n"
+    Project.list_projects
+    puts "\n"
+end
+

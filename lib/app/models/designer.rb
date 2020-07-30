@@ -27,5 +27,14 @@ class Designer < ActiveRecord::Base
     end
   end
 
+  def self.designer_sepcialty_list(specialty)
+    commercial_designers = Designer.all.find_all do |designer|
+      designer.specialty == specialty
+      end
+      commercial_designers.map do |comm_dsgn|
+        puts comm_dsgn.name
+      end
+  end
 
+  
 end

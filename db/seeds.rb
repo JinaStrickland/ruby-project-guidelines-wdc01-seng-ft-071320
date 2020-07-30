@@ -22,3 +22,7 @@ e_gency_hospital = Project.create(designer_id: andrew.id, client_id: e_gency.id,
 ironflat_reno = Project.create(designer_id: joey.id, client_id: ironflat.id, name: "Ironflat Restroom Renovation", category: "Commercial", size: "5,000 SF", location: "Washington DC")
 hash_pital_children = Project.create(designer_id: anna.id, client_id: hash_pital.id, name: "Hash-Pital Children Center Renovation", category: "Healthcare", size: "10,000 SF", location: "Fairfax VA")
 hash_pital_reno = Project.create(designer_id: becca.id, client_id: hash_pital.id, name: "Hash-Pital Renovation", category: "Healthcare", size: "100,000 SF", location: "Fairfax VA")
+
+# flat_reno2 = Project.create(designer_id: null, client_id: flat.id, name: "Flat Lobby Renovation", category: "Commercial", size: "25,000 SF", location: "Arlington VA")
+# flat_reno3 = Project.create(designer_id: null, client_id: flat.id, name: "Flat Restroom Renovation", category: "Commercial", size: "3,000 SF", location: "Arlington VA")
+
