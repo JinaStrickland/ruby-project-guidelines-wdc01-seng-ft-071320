@@ -1,12 +1,14 @@
 
 def greeting
     puts "\n"
-    puts "Welcome to Design Studio!"
+    puts "\n"
+    puts "************ Welcome to Design Studio! ***********"
+    puts "\n"
 end
 
 def choose_option
     puts "Choose from the following options(Enter a number):"
-    puts "**************************************************"
+    puts "--------------------------------------------------"
     puts "1. List all Designers"
     puts "2. List all Clients"
     puts "3. List all Projects"
@@ -16,7 +18,7 @@ def choose_option
     puts "7. Assign a Designer to new Project"
     puts "8. List all Designers that specialize in Commercial Projects:"
     puts "9. Exit"
-    puts "**************************************************"
+    puts "--------------------------------------------------"
     puts "\n"
 end
 
